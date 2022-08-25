@@ -1,23 +1,34 @@
-import logoM from '../assets/bgM.jpg';
-import logoD from '../assets/bgD.JPG';
-import logo from '../assets/logo.png';
-import Mobile from './Mobile';
-import Desktop from './Desktop';
-import { isMobile } from 'react-device-detect';
+
+import React from 'react';
 import '../styles/App.css';
+import Navbar from './NavBar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Services from './Service';
+import About from './About';
+import Gallery from './Gallery';
+import Contact from './Contact';
+import Reviews from './Reviews';
+import Footer from './Footer';
 
 function App() {
   return (
-    /* {isMobile && <img src={logoM} className="background" alt="logo" />}
-        {!isMobile && <img src={logoD} className="background" alt="logo" />}
-        <img src={logo} className="logo" alt="logo" /> */
-    <div className="App">
-          {isMobile ? (
-            <Mobile></Mobile>
-            ):(
-            <Desktop></Desktop>
-          )}
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route>
+            <Route path='/' exact component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/services' component={Services} />
+            <Route path='/gallery' component={Gallery} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/reviews' component={Reviews} />
+          </Route>
+        </Routes>
+      </Router>
+      <Footer />
+    </>
   );
 }
 
