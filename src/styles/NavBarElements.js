@@ -1,4 +1,3 @@
-import Hamburger from 'hamburger-react'
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -22,6 +21,7 @@ export const Logo = styled.div`
   font-size: 1.8rem;
   cursor: pointer;
   height: inherit;
+  margin-left: 1rem;
 `;
 
 export const NavLink = styled(Link)`

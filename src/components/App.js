@@ -18,12 +18,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route>
-            <Route path='/' exact component={Home} />
-            <Route path='/about' component={About} />
-            <Route path='/services' component={Services} />
-            <Route path='/gallery' component={Gallery} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/reviews' component={Reviews} />
+            <Route path='/' exact element={<Home/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/services' element={<Services/>}/>
+            <Route path='/gallery' element={<Gallery/>} />
+            <Route path='/reviews' element={<Reviews/>} />
+            <Route path='/contact' element={<Contact/>} />
           </Route>
         </Routes>
       </Router>
