@@ -1,15 +1,19 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 import angie from '../assets/Home Photos/Angie\'s List Certified.png'
 import ben from '../assets/Home Photos/Benjamin Moore Logo.png'
 import full from '../assets/Home Photos/Fully Licensed & Insured.png'
 import sherwin from '../assets/Home Photos/Sherwin Williams Logo.jpeg'
 import '../styles/App.css';
+import { slideInDown } from 'react-animations';
 
+const slideAnimation = keyframes`${slideInDown}`;
 
+const SlideDiv = styled.div`
+  animation: 1s ${slideAnimation};
+`;
 const Homepage = styled.div`
   background-color: #b4b4b4;
   padding-bottom: 3rem;
@@ -19,9 +23,9 @@ let listOfImages = require.context('../assets/Work Photos', false, /\.(JPG|jpe?g
 listOfImages = listOfImages.map(require.context('../assets/Work Photos', false, /\.(JPG|jpe?g|svg)$/))
 
 const Home = () => {
-  let navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
+
   function resetTimeout() {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -42,6 +46,7 @@ const Home = () => {
       resetTimeout();
     };
   }, [index]);
+  
   return (
     <Homepage>
       <div className="slideshow">
@@ -65,7 +70,7 @@ const Home = () => {
           <img src={sherwin} alt="image" style={{ width: '22%', height: '10%' }}></img>
         </div>
       </div>
-      <div style={{ backgroundColor: '#970C08', padding: '20px' }}>
+      <div style={{ backgroundColor: '#970C08', padding: '40px' }}>
         <div className="titles" style={{ color: 'white' }}>SERVICES</div>
         <div className='services'>
           <div className="service">
@@ -86,6 +91,11 @@ const Home = () => {
               AM Interiors has carpenters ready to build, tear down, or restore whatever comes their way including walls, flooring, doors, kitchens, bathrooms, and cabinets.
             </div>
           </div>
+        </div>
+        <div className="viewServices">
+          <Link to="/services" className='button-17' style={{ padding: '35px 50px' }}>
+            VIEW OUR SERVICES
+          </Link>
         </div>
       </div>
       <div style={{ padding: '20px' }}>
@@ -112,9 +122,7 @@ const Home = () => {
         </div>
       </div>
       <div className="freeQuote">
-        <button role="role" className='button-17' onClick={navigate('/contact')}>
-          SCHEDULE A FREE QUOTE
-        </button>
+        <Link to="/contact" className='button-17' >SCHEDULE A FREE QUOTE</Link>
       </div>
     </Homepage >
   );

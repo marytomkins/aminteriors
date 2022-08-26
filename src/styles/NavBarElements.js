@@ -1,5 +1,10 @@
 import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { slideInRight, fadeInLeft } from 'react-animations';
+
+const menuAnimation = keyframes`${slideInRight}`;
+const logoAnimation = keyframes`${fadeInLeft}`;
+
 
 export const Nav = styled.nav`
   background: #b4b4b4;
@@ -13,6 +18,7 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.div`
+  // animation: 2s ${logoAnimation}; 
   font-family: 'Anton', sans-serif;
   display: flex;
   position: absolute;
@@ -116,7 +122,8 @@ export const NavBtnLink = styled(Link)`
   }
 `;
 
-export const StyledMenu = styled.nav`
+export const StyledMenu = styled.div`
+  animation: 1s ${menuAnimation};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,6 +136,8 @@ export const StyledMenu = styled.nav`
   right: 0;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
+  background-color: #b4b4b4;
+  z-index: 8;
   a {
     font-size: 2rem;
     text-transform: uppercase;
@@ -137,6 +146,9 @@ export const StyledMenu = styled.nav`
     text-decoration: none;
     transition: color 0.3s linear;
     &:hover {
+      color: #000000
+    }
+    &:active {
       color: #000000
     }
   }
