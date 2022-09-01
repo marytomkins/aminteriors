@@ -284,15 +284,43 @@
   display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+  .about {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .logo-div {
+    width: 50%;
+  }
+}
+
 .logo-pic {
   width: 50%;
   display: block;
   margin: auto;
 }
 
-.about-description {
-  font-family: 'Josefin Sans', sans-serif;
+@media screen and (max-width: 1000px) {
+  .logo-pic {
+    width: 89%;
+    margin: auto;
+  }
+}
 
+@media screen and (min-width: 1000px) {
+  .about-description {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto 50px auto auto;
+    width: 50%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-description {
+    margin-bottom: 30px;
+  }
 }
 
 .about-header {
@@ -310,11 +338,21 @@
   font-size: 25px;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-subheader {
+    margin: auto;
+  }
+}
 
 /* SERVICES */
 
 .service-section {
   display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .service-section {
+    display: block;
+  }
 }
 
 .section-left {
@@ -323,12 +361,25 @@
   margin: auto;
   padding: 2rem 0rem 2rem 4rem;
 }
+@media screen and (max-width: 1000px) {
+  .section-left {
+    width: auto;
+    margin: auto;
+    padding: 2rem 0rem 2rem 0rem;
+  }
+}
 
 .section-right {
   display: block;
   margin: auto;
   width: 100%;
   padding: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .section-right {
+    width: auto;
+    padding: 0rem;
+  }
 }
 
 .service-title {

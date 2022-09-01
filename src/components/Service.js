@@ -9,6 +9,8 @@ import circles from "../assets/Lighting Color.jpg";
 
 const Services = () => {
 
+  const { innerWidth } = window;
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -38,9 +40,9 @@ const Services = () => {
       </div>
       <div className="service-section">
         <div className="section-left">
-          <img src={wheel} alt="color-wheel" className='service-pics' style={{ width: '120%' }}></img>
+          <img src={wheel} alt="color-wheel" className='service-pics' style={{ width: innerWidth >= 1000 ? '120%' : '100%' }}></img>
         </div>
-        <div className="section-right" style={{ width: '50%' }}>
+        <div className="section-right" style={{ width: innerWidth >= 1000 ? '50%' : 'auto' }}>
           <div style={{ marginBottom: '20px' }}>
             There are two types of colors you can choose– neutral colors which serve as a base, then accent colors that are used to provide contrast and a feeling of emphasis. For example: a child’s playroom should be colorful because brighter colors are proven to affect childrens’ mood and development in positive ways, while a bedroom can have softer tones which tend to create a calming effect. These types of colors can make or break a living space.
           </div>
@@ -62,15 +64,14 @@ const Services = () => {
           The truth is painting is much more complex than it may seem. When doing more complex designs in your home, it’s highly recommended to go with professionals. AM Interiors specializes in interior household painting including walls/ceilings, doors, trim, molding, cabinets, and stairs. We also provide exterior household painting and coating including siding, trim, decks, stairs, fencing, garage doors, and driveways. With a plethora of experience, AM Interiors will provide you the best advice when deciding on the color of choice of your space, and ensure the beauty of your space is maximized. AM Interiors will create unity and rhythm at your home or business simply through experience.
         </div>
         <div className="section-right">
-          <img src={circles} alt="colors" className='service-pics'></img>
+          <img src={paint} alt="paint" className='service-pics'></img>
         </div>
       </div>
-
       <div className="service-section" style={{ marginTop: '3.5rem' }}>
         <div className="section-left">
           <img src={paint} alt="paint" className='service-pics'></img>
         </div>
-        <div className="section-right" style={{ width: '80%' }}>
+        <div className="section-right" style={{ width: innerWidth >= 1000 ? '80%' : 'auto' }}>
           <div className="service-title">
             REMODELING
           </div>

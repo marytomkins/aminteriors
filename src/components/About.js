@@ -39,10 +39,10 @@ const About = () => {
         AM Interiors is a family-owned contracting company based out of Monmouth County, NJ with over 30 years of experience in residential and commercial painting, remodeling, and renovation.
       </div>
       <div className="about">
-        <div style={{ width: '50%' }}>
+        <div className="logo-div">
           <img src={logo} alt="logo" className='logo-pic'></img>
         </div>
-        <div className="about-description" style={{ width: '50%' }}>
+        <div className="about-description">
           AM Interiors will bring back the liveliness of your New Jersey home or business at a great price. With our proper preparation – we ensure the life expectancy of our work is maximized, and an efficient cleanup. With our hard work – we guarantee the satisfaction of our customers. AM Interiors operates in a stress-free environment from our customers to our employees – providing a job well done. Our professional painters and carpenters will enhance the liveliness of your home – leaving a great impression on you and your family. We provide friendly customer service, fair pricing, and quality work. AM Interiors only operates with the highest grade paints (Sherwin-Williams, Benjamin Moore, and Behr) and highest quality of equipment, as we aim for longevity in our work. We set the standards so you do not have to.
         </div>
       </div>
