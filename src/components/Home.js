@@ -98,8 +98,8 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div style={{ padding: '20px' }}>
-        {/* <div className="titles">REVIEWS</div> */}
+      {/* <div style={{ padding: '20px' }}>
+        <div className="titles">REVIEWS</div>
         <div className='reviews'>
           <div className="review">
             PAINTING
@@ -120,7 +120,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="freeQuote">
         <Link to="/contact" className='button-17' >SCHEDULE A FREE QUOTE</Link>
       </div>

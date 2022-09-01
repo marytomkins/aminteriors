@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations';
 import image from "../assets/Work Photos/IMG_9996.JPG"
@@ -21,25 +22,37 @@ const BouncyDiv = styled.div`
 `;
 const Aboutpage = styled.div`
   background-color: #b4b4b4;
-  padding-bottom: 3rem;
+  padding: 3rem;
 `;
 
 const About = () => {
   return (
-    <Aboutpage>
-      <div className="photo" >
-        <img src={image} alt="image" className='about-pic'></img>
-        <BouncyDiv>quote</BouncyDiv>
+    <><Aboutpage>
+      {/* <div className="photo" >
+      <img src={image} alt="image" className='about-pic'></img>
+      <BouncyDiv>quote</BouncyDiv>
+    </div> */}
+      <div className="about-header">
+        ABOUT US
+      </div>
+      <div className="about-subheader">
+        AM Interiors is a family-owned contracting company based out of Monmouth County, NJ with over 30 years of experience in residential and commercial painting, remodeling, and renovation.
       </div>
       <div className="about">
         <div style={{ width: '50%' }}>
           <img src={logo} alt="logo" className='logo-pic'></img>
         </div>
         <div className="about-description" style={{ width: '50%' }}>
-          AM Interiors is a family-owned contracting company based out of Monmouth County, NJ with over 30 years of experience in residential and commercial painting, remodeling, and renovation. AM Interiors will bring back the liveliness of your New Jersey home or business at a great price. With our proper preparation – we ensure the life expectancy of our work is maximized, and an efficient cleanup. With our hard work – we guarantee the satisfaction of our customers. AM Interiors operates in a stress-free environment from our customers to our employees – providing a job well done. Our professional painters and carpenters will enhance the liveliness of your home – leaving a great impression on you and your family. We provide friendly customer service, fair pricing, and quality work. AM Interiors only operates with the highest grade paints (Sherwin-Williams, Benjamin Moore, and Behr) and highest quality of equipment, as we aim for longevity in our work. We set the standards so you do not have to. We understand that every person has their own unique set of goals and expectations, that is why we offer free quotes and consultations.
+          AM Interiors will bring back the liveliness of your New Jersey home or business at a great price. With our proper preparation – we ensure the life expectancy of our work is maximized, and an efficient cleanup. With our hard work – we guarantee the satisfaction of our customers. AM Interiors operates in a stress-free environment from our customers to our employees – providing a job well done. Our professional painters and carpenters will enhance the liveliness of your home – leaving a great impression on you and your family. We provide friendly customer service, fair pricing, and quality work. AM Interiors only operates with the highest grade paints (Sherwin-Williams, Benjamin Moore, and Behr) and highest quality of equipment, as we aim for longevity in our work. We set the standards so you do not have to.
         </div>
       </div>
-    </Aboutpage>
+      <div className="about-subheader">
+        We understand that every person has their own unique set of goals and expectations, that is why we offer free quotes and consultations.
+        <div className="freeQuote">
+          <Link to="/contact" className='button-17' >SCHEDULE A FREE QUOTE</Link>
+        </div>
+      </div>
+    </Aboutpage></>
   );
 };
 

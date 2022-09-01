@@ -27,7 +27,7 @@ const Navbar = () => {
       link: '',
     },
     {
-      label: 'ABOUT US',
+      label: 'ABOUT',
       link: '/about',
     },
     {
