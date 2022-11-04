@@ -7,12 +7,12 @@ const logoAnimation = keyframes`${fadeInLeft}`;
 
 
 export const Nav = styled.nav`
-  background: #b4b4b4;
+  background: #cacaca;
   height: 80px;
   display: flex;
   justify-content: end;
   z-index: 12;
-  width: 100%
+  width: 100%;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
@@ -131,12 +131,12 @@ export const StyledMenu = styled.div`
   min-width: 100%;
   text-align: center;
   padding: 0px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
-  background-color: #b4b4b4;
+  background-color: #cacaca;
   z-index: 8;
   a {
     font-size: 2rem;

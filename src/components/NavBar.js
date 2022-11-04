@@ -31,12 +31,12 @@ const Navbar = () => {
       link: '/about',
     },
     {
-      label: 'PHOTOS',
-      link: '/gallery',
-    },
-    {
       label: 'SERVICES',
       link: '/services',
+    },
+    {
+      label: 'PHOTOS',
+      link: '/gallery',
     },
     {
       label: 'REVIEWS',
@@ -66,14 +66,14 @@ const Navbar = () => {
               {tab.label}
             </NavLink>
           )}
-          <a style={{ width: '1.5%', padding: '0 .5rem' }} alt="Instagram" href="https://www.instagram.com/am_interiors_nj/" target="_blank">
+          <a style={{ width: '1.5%', padding: '0 .5rem' }} alt="Instagram" href="https://www.instagram.com/aminteriorsnj/" target="_blank">
             <img src={ig} style={{ width: '100%' }} />
           </a>
-          <a style={{ width: '1.5%', padding: '0 .5rem' }} alt="Angie's List" href="https://www.google.com/search?ved=1t:65428&hl=en&_ga=2.99571422.1952029782.1660003924-1677009908.1658609270&q=AM+Interiors&ludocid=2968458077763028879&lsig=AB86z5U1l9hcowgqDLVjT9L8N-qQ#trex=m_t:lcl_akp,rc_ludocids:2968458077763028879,rc_q:AM%2520Interiors,ru_gwp:0%252C7,ru_q:AM%2520Interiors,trex_id:g3d1ad" target="_blank">
-            <img src={angie} style={{ width: '100%' }} />
-          </a>
-          <a style={{ width: '1.76%', padding: '0 .5rem' }} alt="Google" href="https://www.homeadvisor.com/rated.AMInteriors.128384890.html" target="_blank">
+          <a style={{ width: '1.76%', padding: '0 .5rem' }} alt="Angie's List" href="https://www.google.com/search?ved=1t:65428&hl=en&_ga=2.99571422.1952029782.1660003924-1677009908.1658609270&q=AM+Interiors&ludocid=2968458077763028879&lsig=AB86z5U1l9hcowgqDLVjT9L8N-qQ#trex=m_t:lcl_akp,rc_ludocids:2968458077763028879,rc_q:AM%2520Interiors,ru_gwp:0%252C7,ru_q:AM%2520Interiors,trex_id:g3d1ad" target="_blank">
             <img src={google} style={{ width: '100%' }} />
+          </a>
+          <a style={{ width: '1.5%', padding: '0 .5rem' }} alt="Google" href="https://www.homeadvisor.com/rated.AMInteriors.128384890.html" target="_blank">
+            <img src={angie} style={{ width: '100%' }} />
           </a>
         </NavMenu>
       </Nav>
