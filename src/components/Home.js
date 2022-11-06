@@ -7,14 +7,17 @@ import ben from '../assets/Home Photos/Benjamin Moore Logo.png'
 import full from '../assets/Home Photos/Fully Licensed & Insured.png'
 import sherwin from '../assets/Home Photos/Sherwin Williams Logo.jpeg'
 import logoCut from '../assets/White Logo - Cut.png';
+import desktopBackground from '../assets/Desktop.jpeg';
 import '../styles/App.css';
 
 const Homepage = styled.div`
   background-color: #cacaca;
 `;
+const isMobile = innerWidth <= '1000'
+
 const delay = 4500;
-let listOfImages = require.context('../assets/Work Photos', false, /\.(JPG|jpe?g|svg)$/).keys()
-listOfImages = listOfImages.map(require.context('../assets/Work Photos', false, /\.(JPG|jpe?g|svg)$/))
+let listOfImages = require.context('../assets/ss', false, /\.(JPG|jpe?g|svg)$/).keys()
+listOfImages = listOfImages.map(require.context('../assets/ss', false, /\.(JPG|jpe?g|svg)$/))
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -48,19 +51,35 @@ const Home = () => {
   return (
     <Homepage>
       <div style={{ position: 'relative' }}>
-        <div className="slideshow">
-          <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-            {listOfImages.map((image, index) => (
-              <div
-                className="slide"
-                key={index}
-                style={{ maxWidth: '100%' }}
-              >
-                <img key={index} src={image} alt="image" style={{ maxWidth: '100%', display: 'block' }}></img>
-              </div>
-            ))}
+        {isMobile ? (
+          <div className="slideshow">
+            <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+              {listOfImages.map((image, index) => (
+                <div
+                  className="slide"
+                  key={index}
+                  style={{ maxWidth: '100%' }}
+                >
+                  <img key={index} src={image} alt="image" style={{ maxWidth: '100%', display: 'block' }}></img>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="slideshow">
+            {/* <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}> */}
+            {/* {listOfImages.map((image, index) => ( */}
+            <div
+              className="slide"
+              key={index}
+              style={{ maxWidth: '100%' }}
+            >
+              <img key={index} src={desktopBackground} alt="image" style={{ maxWidth: '100%', display: 'block' }}></img>
+            </div>
+            {/* ))} */}
+            {/* </div> */}
+          </div>
+        )}
         <div className="slideshow-text">
           <div className="slideshow-imgdiv">
             <img className="slideshow-img" src={logoCut} />
@@ -75,7 +94,7 @@ const Home = () => {
             <Link to="/contact" className='tablinks' id='home'>Learn More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{'>'}</Link>
           </div> */}
         </div>
-      </div>
+      </div >
       <div style={{ padding: '20px' }}>
         <div className="titles">CERTIFIED. PROFESSIONAL. RELIABLE.</div>
         <div className='homepagepics'>
